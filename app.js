@@ -1,7 +1,8 @@
 var express = require('express');
-var utility = require('utility');
+var utility = require('utility'); 
 var cheerio = require('cheerio');
-var superagent = require('superagent');
+var superagent = require('superagent'); 
+var async = require('async'); 
 var url = require('url');
 
 var app = express();
@@ -49,6 +50,11 @@ superagent.get(cnodeURL)
       });
 
 })
+
+// async.mapLimit(urls,5,()=>{   async库的mapLimit限制并发抓取的数量
+
+    //logic
+// })
 
 
 app.listen(3000,() => {
