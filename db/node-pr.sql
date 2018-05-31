@@ -1,0 +1,7 @@
+SET NAMES utf8;
+SET FOREIGN_KEY_CHECKS = 0;
+
+
+
+DROP TABLE IF EXISTS 'm_aricle';
+-- CREATE TABLE 'm_aricle'
