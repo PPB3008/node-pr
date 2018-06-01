@@ -71,11 +71,12 @@ var user = {
  
  app.get('/addUser', function (req, res) {
     // 读取已存在的数据
+    console.log( 1 );
     fs.readFile( __dirname + "/" + "user.json", 'utf8', function (err, data) {
         data = JSON.parse( data );
         data["user4"] = user["user4"];
-        console.log( data );
-        res.end( JSON.stringify(data));
+        res.header("Access-Control-Allow-Origin","*");
+        res.send(JSON.stringify(data));
     });
  })
 // let router = new Router();
